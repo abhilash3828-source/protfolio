@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#262525;
+    color:#fff;
+}
+
+.projects-section{
+    padding:6rem 8%;
+}
+
+/* Title */
+.main-title{
+    text-align:center;
+    font-size:3.5rem;
+    color:#5DB9EE;
+    margin-bottom:4rem;
+}
+
+/* Category */
+.project-category{
+    margin-bottom:5rem;
+}
+
+.project-category h2{
+    font-size:2rem;
+    margin-bottom:1.8rem;
+    color:#5DB9EE;
+}
+
+/* Base Project Box */
+.project-box{
+    background:linear-gradient(135deg, #3877FF, #5DB9EE);
+    border-radius:1rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:500;
+    transition:.5s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Hover */
+.project-box::after{
+    content:"View Project";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    transition:.5s;
+}
+
+.project-box:hover::after{
+    opacity:1;
+}
+
+.project-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 2rem rgba(93,185,238,.45);
+}
+
+
+
+/* POSTERS (Vertical) */
+.poster-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:2rem;
+}
+.poster{
+    aspect-ratio:3 / 4;
+}
+
+/* THUMBNAILS (Wide) */
+.thumbnail-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:2rem;
+}
+.thumbnail{
+    aspect-ratio:16 / 9;
+}
+
+/* SOCIAL MEDIA (Square) */
+.social-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:2rem;
+}
+.social{
+    aspect-ratio:1 / 1;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    .main-title{
+        font-size:2.6rem;
+    }
+}
+/* LOGO (last section – centered & medium size) */
+.logo-section{
+    text-align:center;
+}
+
+.logo-grid{
+    display:flex;
+    justify-content:center;
+}
+
+.logo{
+    width:260px;          /* medium size */
+    aspect-ratio:1 / 1;
+}
