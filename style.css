@@ -182,4 +182,136 @@ width:38rem;
 .navlist li a:hover::after, .navlist .active::after{
     transform:scaleX(1);
     transform-origin:bottom left;
+
+}
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .content {
+        margin-left: 2rem;
+    }
+
+    .design .circle:nth-child(1) {
+        width: 30rem;
+    }
+
+    .design .circle:nth-child(2) {
+        width: 20rem;
+    }
+}
+
+/* ===============================
+   MOBILE VIEW
+   =============================== */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navlist {
+        height: auto;
+        padding: 1rem 0;
+        gap: 1.5rem;
+        background: #262525;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .navlist li a {
+        font-size: 1.1rem;
+    }
+
+    /* Main Layout */
+    .portfolio-container {
+        flex-direction: column;
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%;
+        height: auto;
+        padding: 4rem 1.5rem;
+    }
+
+    .right-container {
+        background: linear-gradient(180deg, #3877ff, #262525);
+    }
+
+    /* Content */
+    .content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content .intro {
+        font-size: 1.2rem;
+    }
+
+    .content .detail {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    /* Buttons */
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    button:nth-child(2) {
+        margin-left: 0;
+    }
+
+    /* Icons */
+    .icons {
+        flex-direction: row;
+        margin-top: 2rem;
+        gap: 2rem;
+    }
+
+    /* Circles (IMPORTANT FIX) */
+    .design .circle {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 2rem auto;
+    }
+
+    .design .circle:nth-child(1) {
+        display: none; /* mobile me unnecessary */
+    }
+
+    .design .circle:nth-child(2) {
+        width: 16rem;
+    }
+}
+
+/* ===============================
+   VERY SMALL PHONES
+   =============================== */
+@media (max-width: 480px) {
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content .intro span {
+        font-size: 1.4rem;
+    }
+
+    .navlist li a {
+        font-size: 1rem;
+    }
 }
