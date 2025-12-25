@@ -315,6 +315,16 @@ width:38rem;
         font-size: 1rem;
     }
 }
+/* ===== TOOLS (FRONT PAGE BOTTOM) ===== */
+.tools{
+    position:absolute;
+    bottom:2rem;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    text-align:center;
+     
+}
 
 .tools h2{
     font-size:2.2rem;
@@ -342,3 +352,4 @@ width:38rem;
 .tools-icons img:hover{
     transform:translateY(-6px) scale(1.05);
 }
+
