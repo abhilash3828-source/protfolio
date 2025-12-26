@@ -48,6 +48,14 @@ body{
     overflow:hidden;
 }
 
+/* ✅ IMAGE FIX (MAIN SOLUTION) */
+.project-box img{
+    width:100%;
+    height:100%;
+    object-fit:contain;   /* shows full thumbnail */
+    background:#000;
+}
+
 /* Hover */
 .project-box::after{
     content:"View Project";
@@ -70,9 +78,7 @@ body{
     box-shadow:0 0 2rem rgba(93,185,238,.45);
 }
 
-
-
-/* POSTERS (Vertical) */
+/* POSTERS */
 .poster-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
@@ -82,7 +88,7 @@ body{
     aspect-ratio:3 / 4;
 }
 
-/* THUMBNAILS (Wide) */
+/* THUMBNAILS */
 .thumbnail-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
@@ -92,7 +98,7 @@ body{
     aspect-ratio:16 / 9;
 }
 
-/* SOCIAL MEDIA (Square) */
+/* SOCIAL */
 .social-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
@@ -102,23 +108,22 @@ body{
     aspect-ratio:1 / 1;
 }
 
+/* LOGO */
+.logo-section{
+    text-align:center;
+}
+.logo-grid{
+    display:flex;
+    justify-content:center;
+}
+.logo{
+    width:260px;
+    aspect-ratio:1 / 1;
+}
+
 /* Responsive */
 @media(max-width:600px){
     .main-title{
         font-size:2.6rem;
     }
-}
-/* LOGO (last section – centered & medium size) */
-.logo-section{
-    text-align:center;
-}
-
-.logo-grid{
-    display:flex;
-    justify-content:center;
-}
-
-.logo{
-    width:260px;          /* medium size */
-    aspect-ratio:1 / 1;
 }
