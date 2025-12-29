@@ -13,7 +13,7 @@
 }
 .navlist{
     display:flex;
-    gap: 3.5rem;
+    gap: 2rem;
     height:15vh;
     width:100%;
     justify-content: center;
@@ -26,7 +26,7 @@
 .navlist li a{
     text-decoration:none;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color:#fff;
     position:relative;
 }
@@ -37,7 +37,7 @@
 }
 .left-container{
 background: #262525;
-width: 70%;
+width: 75%;
 padding-left: 3rem;
 
 
@@ -45,7 +45,7 @@ padding-left: 3rem;
 }
 .right-container{
 background: linear-gradient(-45deg, #3877ff, #262525 70%);
-width: 30%;
+width: 25%;
 
 }
 .icons .fa-brands{
@@ -69,17 +69,17 @@ width: 30%;
     color:#fff;
 }
 .content .intro span{
-    font-size:1.8rem;  
+    font-size:1.3rem;  
     color:#5DB9EE;
 }
 .content h1{
-    font-size:4rem;  
+    font-size:2.9rem;  
     color:#5DB9EE;
 }
 .content .detail{
-    font-size: 1rem;
+    font-size: 0.9rem;
     color:#fff;
-    max-width:42rem;
+    max-width:33rem;
     margin:1.1rem 0 3rem 0;/*top right bottom left*/
     line-height:1.8rem;
 
@@ -126,7 +126,7 @@ button:nth-child(2):hover{
     position:absolute;
     border-radius:50%;
     top: 50%;
-    left: 70%;
+    left: 72%;
     transform: translate(-50%, -50%);
 }
 .design .circle:nth-child(1){
@@ -182,74 +182,60 @@ width:38rem;
 .navlist li a:hover::after, .navlist .active::after{
     transform:scaleX(1);
     transform-origin:bottom left;
-
 }
 /* ===============================
-   RESPONSIVE DESIGN
+   🔥 FINAL MOBILE FIX (NO BREAK)
    =============================== */
 
-/* Tablets & small laptops */
-@media (max-width: 1024px) {
-    .content h1 {
-        font-size: 3rem;
-    }
-
-    .content {
-        margin-left: 2rem;
-    }
-
-    .design .circle:nth-child(1) {
-        width: 30rem;
-    }
-
-    .design .circle:nth-child(2) {
-        width: 20rem;
-    }
-}
-
-/* ===============================
-   MOBILE VIEW
-   =============================== */
 @media (max-width: 768px) {
 
-    /* Navbar */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
     .navlist {
-        height: auto;
-        padding: 1rem 0;
-        gap: 1.5rem;
-        background: #262525;
         position: relative;
-        flex-wrap: wrap;
+        height: auto;
+        padding: 1rem;
+        gap: 1.2rem;
+        background: #262525;
     }
 
     .navlist li a {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
-    /* Main Layout */
+    /* MAIN CONTAINER */
     .portfolio-container {
         flex-direction: column;
+        min-height: auto;
     }
 
     .left-container,
     .right-container {
         width: 100%;
         height: auto;
-        padding: 4rem 1.5rem;
+        padding: 3rem 1.5rem;
     }
 
+    /* REMOVE SPLIT BACKGROUND ISSUE */
     .right-container {
-        background: linear-gradient(180deg, #3877ff, #262525);
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    /* Content */
+    /* CONTENT CENTER */
     .content {
-        margin-left: 0;
+        margin: 0;
         text-align: center;
     }
 
     .content h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
+        line-height: 1.2;
     }
 
     .content .intro {
@@ -261,58 +247,50 @@ width:38rem;
         max-width: 100%;
     }
 
-    /* Buttons */
+    /* BUTTONS */
     .btn-container {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
+    }
+
+    .btn-container button {
+        width: 90%;
     }
 
     button:nth-child(2) {
         margin-left: 0;
     }
 
-    /* Icons */
+    /* ICONS FIX */
     .icons {
         flex-direction: row;
-        margin-top: 2rem;
-        gap: 2rem;
+        justify-content: center;
+        margin: 2rem 0;
     }
 
-    /* Circles (IMPORTANT FIX) */
+    /* 🔥 MOST IMPORTANT FIX */
+    .design {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
     .design .circle {
         position: relative;
         top: auto;
         left: auto;
         transform: none;
-        margin: 2rem auto;
     }
 
     .design .circle:nth-child(1) {
-        display: none; /* mobile me unnecessary */
+        display: none; /* kill broken half circle */
     }
 
     .design .circle:nth-child(2) {
-        width: 16rem;
-    }
-}
-
-/* ===============================
-   VERY SMALL PHONES
-   =============================== */
-@media (max-width: 480px) {
-
-    .content h1 {
-        font-size: 2rem;
-    }
-
-    .content .intro span {
-        font-size: 1.4rem;
-    }
-
-    .navlist li a {
-        font-size: 1rem;
+        width: 12rem;
+        height: 12rem;
     }
 }
 /* ===== TOOLS (FRONT PAGE BOTTOM) ===== */
@@ -323,25 +301,25 @@ width:38rem;
     transform:translateX(-50%);
     width:90%;
     text-align:center;
-     
+     color: #fe0000;
 }
 
 .tools h2{
-    font-size:2.2rem;
+    font-size:2rem;
     color:#2b2218;
     margin-bottom:1.5rem;
 }
 
 .tools-icons{
     display:flex;
-    justify-content:center;
+    justify-content:left;
     gap:1.5rem;
     flex-wrap:wrap;
 }
 
 .tools-icons img{
-    width:65px;
-    height:65px;
+    width:55px;
+    height:55px;
     border-radius:16px;
     background:#fff;
     padding:8px;
@@ -352,4 +330,3 @@ width:38rem;
 .tools-icons img:hover{
     transform:translateY(-6px) scale(1.05);
 }
-
